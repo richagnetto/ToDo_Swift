@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zLy-mg-Aoj">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--To Do List-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ToDoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Q53-nc-w3v">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="3AF-Mt-7RV"/>
+                                    <constraint firstAttribute="width" constant="375" id="SKi-Kd-RWE"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SDo-tS-H62">
+                                <rect key="frame" x="0.0" y="147" width="375" height="520"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="6GA-Z7-Vyu"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToDoCell" id="zab-x9-W7b" customClass="ToDoCell" customModule="ToDoApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zab-x9-W7b" id="SSr-cZ-4sG">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To Do Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJV-dg-27i">
+                                                    <rect key="frame" x="15" y="11" width="93" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priority" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hae-SP-djD">
+                                                    <rect key="frame" x="305" y="10" width="55" height="23.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="BJV-dg-27i" firstAttribute="centerY" secondItem="SSr-cZ-4sG" secondAttribute="centerY" id="3Aa-Rv-qNb"/>
+                                                <constraint firstItem="hae-SP-djD" firstAttribute="top" secondItem="SSr-cZ-4sG" secondAttribute="top" constant="10" id="6Lu-z8-i0X"/>
+                                                <constraint firstItem="hae-SP-djD" firstAttribute="centerY" secondItem="SSr-cZ-4sG" secondAttribute="centerY" id="6wc-l8-ybE"/>
+                                                <constraint firstItem="BJV-dg-27i" firstAttribute="leading" secondItem="SSr-cZ-4sG" secondAttribute="leadingMargin" constant="7" id="dBL-BZ-Zen"/>
+                                                <constraint firstItem="BJV-dg-27i" firstAttribute="top" secondItem="SSr-cZ-4sG" secondAttribute="top" constant="11" id="ifn-uQ-ttZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="BJV-dg-27i" secondAttribute="bottom" constant="11.5" id="neO-zQ-JEo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hae-SP-djD" secondAttribute="trailing" constant="7" id="v2z-nQ-5UB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="detailLabel" destination="BJV-dg-27i" id="Upr-Qv-ZKb"/>
+                                            <outlet property="priorityLabel" destination="hae-SP-djD" id="A7u-p7-Jnn"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WPv-N7-7Uf"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Kne-DZ-Mb1"/>
+                                </connections>
+                            </tableView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fZl-EL-CTc">
+                                <rect key="frame" x="0.0" y="120" width="375" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="J8x-Vd-k6D"/>
+                                    <constraint firstAttribute="height" constant="27" id="vnV-OV-8US"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Priority"/>
+                                    <segment title="Date Created"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentSort:" destination="BYZ-38-t0r" eventType="valueChanged" id="TZT-Af-ZL2"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="fZl-EL-CTc" firstAttribute="top" secondItem="Q53-nc-w3v" secondAttribute="bottom" id="28e-HL-L0Z"/>
+                            <constraint firstItem="Q53-nc-w3v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2tI-Jq-FBS"/>
+                            <constraint firstItem="SDo-tS-H62" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="54O-hu-onX"/>
+                            <constraint firstItem="SDo-tS-H62" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5zh-D8-0j7"/>
+                            <constraint firstItem="Q53-nc-w3v" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Cmo-dI-smw"/>
+                            <constraint firstItem="fZl-EL-CTc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Yl5-Yn-QLf"/>
+                            <constraint firstItem="SDo-tS-H62" firstAttribute="top" secondItem="fZl-EL-CTc" secondAttribute="bottom" id="fa8-U2-aNR"/>
+                            <constraint firstItem="Q53-nc-w3v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kna-kx-Z1e"/>
+                            <constraint firstItem="SDo-tS-H62" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="nnF-X6-q4R"/>
+                            <constraint firstItem="fZl-EL-CTc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oBe-Eh-P0c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="EeT-Ot-FFH" appends="YES" id="bqG-rO-hNV"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" title="To Do List" id="SkB-Lg-N1b">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="wpZ-dN-9Ie">
+                            <connections>
+                                <action selector="addToDoTapped" destination="BYZ-38-t0r" id="hiW-b3-699"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="Q53-nc-w3v" id="KoO-0x-5mk"/>
+                        <outlet property="segment" destination="fZl-EL-CTc" id="KVl-Lf-ugI"/>
+                        <outlet property="tableView" destination="SDo-tS-H62" id="Ql3-5e-I6C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="EeT-Ot-FFH">
+                    <connections>
+                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="43u-bz-e1V"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="476" y="133.5832083958021"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pPr-ae-Ujf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zLy-mg-Aoj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GTM-b4-Bbu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KUP-CQ-iyY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0hX-E3-d9F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-305" y="134"/>
+        </scene>
+    </scenes>
+</document>
