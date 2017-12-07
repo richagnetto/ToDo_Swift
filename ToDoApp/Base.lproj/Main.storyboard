@@ -30,7 +30,7 @@
                                 <rect key="frame" x="0.0" y="147" width="375" height="520"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="6GA-Z7-Vyu"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="6GA-Z7-Vyu"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ToDoCell" id="zab-x9-W7b" customClass="ToDoCell" customModule="ToDoApp" customModuleProvider="target">
@@ -57,9 +57,10 @@
                                                 <constraint firstItem="BJV-dg-27i" firstAttribute="centerY" secondItem="SSr-cZ-4sG" secondAttribute="centerY" id="3Aa-Rv-qNb"/>
                                                 <constraint firstItem="hae-SP-djD" firstAttribute="top" secondItem="SSr-cZ-4sG" secondAttribute="top" constant="10" id="6Lu-z8-i0X"/>
                                                 <constraint firstItem="hae-SP-djD" firstAttribute="centerY" secondItem="SSr-cZ-4sG" secondAttribute="centerY" id="6wc-l8-ybE"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="BJV-dg-27i" secondAttribute="trailingMargin" id="JqG-an-U22"/>
+                                                <constraint firstItem="hae-SP-djD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="SSr-cZ-4sG" secondAttribute="leadingMargin" id="Ty1-5G-J9v"/>
                                                 <constraint firstItem="BJV-dg-27i" firstAttribute="leading" secondItem="SSr-cZ-4sG" secondAttribute="leadingMargin" constant="7" id="dBL-BZ-Zen"/>
                                                 <constraint firstItem="BJV-dg-27i" firstAttribute="top" secondItem="SSr-cZ-4sG" secondAttribute="top" constant="11" id="ifn-uQ-ttZ"/>
-                                                <constraint firstAttribute="bottom" secondItem="BJV-dg-27i" secondAttribute="bottom" constant="11.5" id="neO-zQ-JEo"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="hae-SP-djD" secondAttribute="trailing" constant="7" id="v2z-nQ-5UB"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -77,7 +78,7 @@
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="fZl-EL-CTc">
                                 <rect key="frame" x="0.0" y="120" width="375" height="28"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="J8x-Vd-k6D"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="375" id="J8x-Vd-k6D"/>
                                     <constraint firstAttribute="height" constant="27" id="vnV-OV-8US"/>
                                 </constraints>
                                 <segments>
@@ -104,9 +105,6 @@
                             <constraint firstItem="fZl-EL-CTc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="oBe-Eh-P0c"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="EeT-Ot-FFH" appends="YES" id="bqG-rO-hNV"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="To Do List" id="SkB-Lg-N1b">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wpZ-dN-9Ie">
@@ -122,11 +120,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="EeT-Ot-FFH">
-                    <connections>
-                        <action selector="dismissKeyboard:" destination="BYZ-38-t0r" id="43u-bz-e1V"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
         </scene>

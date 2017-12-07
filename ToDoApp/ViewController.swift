@@ -56,10 +56,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
-    @IBAction func dismissKeyboard(_ sender: UITapGestureRecognizer) {
-        self.searchBar.resignFirstResponder()
-        self.reloadData()
-    }
+ 
     
   //  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
      //   searchBar.resignFirstResponder()
@@ -125,6 +122,7 @@ extension ViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        print("Deleting")
         guard editingStyle == .delete else { return }
         let toDoDetail = toDoDetails[indexPath.row]
         
